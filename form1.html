@@ -1,33 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        header{
-            margin: 0;
-            background-color:rgb(6, 82, 157);
-            height: 100px;
-        }
-        header img{
-            padding: 10px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img src="https://online.handong.edu/xn-sso-e/customs/resources/login_logo.png">
-    </header>
+
+    <title>회원가입</title>
     
+</head>
+
+<body>
+
+    <header>
+        <a href="https://www.coupang.com/">
+            <img src="https://static.coupangcdn.com/image/static/login/logo-coupang.x2.20201201.png" alt="쿠팡 로고"
+                width="195">
+        </a>
+    </header>
+
+
     <main>
-        <h1>회원정보를 입력해주세요</h1>
-        <form id="userinfo" method="post">
-            <input type="text" name="아이디" placeholder="아이디"><br>
-            <input type="text" name="비밀번호" placeholder="비밀번호"><br>
-            <input type="text" name="비밀번호확인" placeholder="비밀번호확인"><br>
-            <input type="text" name="휴대폰번호" placeholder="휴대폰번호"><br>
+
+        <h1>회원가입</h1>
+
+        <form action="#" method="post">
+
+            <fieldset>
+
+                <legend>회원정보 입력</legend>
+
+
+                <div>
+                    <label for="name">이름</label><br>
+
+                    <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="userId">아이디</label><br>
+
+                    <input type="text" id="userId" name="userId" placeholder="아이디를 입력하세요" required>
+                </div><br>
+
+                <div>
+                    <label for="email">이메일</label><br>
+
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </div><br>
+
+                <div>
+                    <label for="password">비밀번호</label><br>
+
+                    <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+                </div><br>
+
+                <div>
+                    <label for="passwordCheck">비밀번호 확인</label><br>
+
+                    <input type="password" id="passwordCheck" name="passwordCheck" placeholder="비밀번호를 다시 입력하세요"
+                        required>
+                </div><br>
+
+                <div>
+                    <label for="phone">휴대폰 번호</label><br>
+
+                    <input type="tel" id="phone" name="phone" placeholder="010-1234-5678" required>
+                </div><br>
+
+                <div>
+                    <label for="birth">생년월일</label><br>
+
+                    <input type="date" id="birth" name="birth" required>
+                </div><br>
+
+                <div>
+
+                    <p>성별</p>
+
+                    <input type="radio" id="male" name="gender" value="male">
+
+                    <label for="male">남성</label>
+
+
+                    <input type="radio" id="female" name="gender" value="female">
+
+                    <label for="female">여성</label>
+
+
+                    <input type="radio" id="other" name="gender" value="other">
+
+                    <label for="other">선택하지 않음</label>
+
+                </div><br>
+
+                <div>
+
+                    <label for="region">지역</label><br>
+
+                    <select id="region" name="region" required>
+
+                        <option value="">지역을 선택하세요</option>
+
+                        <optgroup label="수도권">
+                            <option value="seoul">서울</option>
+                            <option value="gyeonggi">경기도</option>
+                            <option value="incheon">인천</option>
+                        </optgroup>
+
+
+                        <optgroup label="경상권">
+                            <option value="busan">부산</option>
+                            <option value="daegu">대구</option>
+                            <option value="ulsan">울산</option>
+                            <option value="gyeongbuk">경상북도</option>
+                            <option value="gyeongnam">경상남도</option>
+                        </optgroup>
+
+
+                        <optgroup label="충청권">
+                            <option value="daejeon">대전</option>
+                            <option value="chungbuk">충청북도</option>
+                            <option value="chungnam">충청남도</option>
+                        </optgroup>
+
+
+                        <optgroup label="전라권">
+                            <option value="gwangju">광주</option>
+                            <option value="jeonbuk">전라북도</option>
+                            <option value="jeonnam">전라남도</option>
+                        </optgroup>
+
+
+                        <optgroup label="기타">
+                            <option value="gangwon">강원도</option>
+                            <option value="jeju">제주도</option>
+                        </optgroup>
+
+                    </select>
+
+                </div><br>
+
+                <div>
+
+                    <p>관심 상품</p>
+
+                    <input type="checkbox" id="food" name="interest" value="food">
+                    <label for="food">식품</label>
+
+
+                    <input type="checkbox" id="fashion" name="interest" value="fashion">
+                    <label for="fashion">패션</label>
+
+
+                    <input type="checkbox" id="digital" name="interest" value="digital">
+                    <label for="digital">디지털</label>
+
+
+                    <input type="checkbox" id="living" name="interest" value="living">
+                    <label for="living">생활용품</label>
+
+                </div><br>
+                <div>
+                    <label for="message">
+                        배송시 요청사항
+                    </label>
+
+                    <br>
+
+                    <textarea id="message" name="message" rows="5" cols="40" placeholder="내용을 입력하세요"></textarea>
+                </div>
+
+
+            </fieldset><br>
+
+            <fieldset>
+
+                <legend>약관 동의</legend>
+
+
+                <div>
+                    <input type="checkbox" id="terms" name="terms" required>
+
+                    <label for="terms">
+                        [필수] 이용약관 동의
+                    </label>
+                </div><br>
+
+                <div>
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy">
+                        [필수] 개인정보 수집 및 이용 동의
+                    </label>
+                </div><br>
+
+                <div>
+                    <input type="checkbox" id="marketing" name="marketing">
+
+                    <label for="marketing">
+                        [선택] 쇼핑정보 및 광고 수신 동의
+                    </label>
+                </div>
+            </fieldset><br>
+
+            <button type="submit">
+                동의하고 가입하기
+            </button>
         </form>
     </main>
+
+
+    <footer>
+        <p>Coupang. It is clone coding.</p>
+    </footer>
+
 </body>
+
 </html>
